@@ -1,17 +1,18 @@
 :root {
-  --bg-color: #1a1a1a;
+  --bg-color: #0a0a0a; /* Deep near-black */
   --title-color: #39ff14; /* Toxic neon green */
-  --text-color: #f5f5dc; /* Cream/off-white */
+  --text-color: #fffdd0; /* Creamier/Warmer cream */
   --link-hover: #ffffff;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Courier New', Courier, monospace; /* Fits the "grim" aesthetic */
+  font-family: "Garamond", "Baskerville", "Libre Baskerville", serif; /* More 'aesthetic' serif font */
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.8;
+  letter-spacing: 0.01rem;
 }
 
 header {
@@ -22,24 +23,24 @@ header {
 h1 {
   color: var(--title-color);
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.3rem;
   font-size: 2.5rem;
   margin: 0;
   text-shadow: 0 0 5px var(--title-color), 0 0 10px var(--title-color);
-  animation: flicker 5s infinite;
+  animation: flicker 4s infinite;
 }
 
 @keyframes flicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  0%, 19.999%, 22.001%, 23.999%, 25.001%, 54.999%, 56.001%, 100% {
     text-shadow: 
       0 0 4px var(--title-color),
       0 0 11px var(--title-color),
       0 0 19px var(--title-color);
     opacity: 1;
   }
-  20%, 24%, 55% {
+  20%, 21%, 24%, 24.5%, 55%, 55.5% {
     text-shadow: none;
-    opacity: 0.4;
+    opacity: 0.3;
   }
 }
 
